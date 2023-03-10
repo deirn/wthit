@@ -1,0 +1,8 @@
+{
+  "type"           : "waila:gradient",
+  "square"         : false,
+  "backgroundColor": 1250067,
+  "gradientStart"  : 3684408,
+  "gradientEnd"    : 2368548,
+  "fontColor"      : 10526880
+}

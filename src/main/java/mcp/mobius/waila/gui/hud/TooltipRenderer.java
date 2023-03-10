@@ -8,14 +8,11 @@ import com.google.common.base.Preconditions;
 import com.google.common.base.Suppliers;
 import com.mojang.blaze3d.platform.Window;
 import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.BufferBuilder;
-import com.mojang.blaze3d.vertex.DefaultVertexFormat;
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.Tesselator;
-import com.mojang.blaze3d.vertex.VertexFormat;
 import com.mojang.text2speech.Narrator;
 import mcp.mobius.waila.access.DataAccessor;
 import mcp.mobius.waila.api.IEventListener;
+import mcp.mobius.waila.api.ITheme;
 import mcp.mobius.waila.api.ITooltipComponent;
 import mcp.mobius.waila.api.IWailaConfig.Overlay.Position.Align;
 import mcp.mobius.waila.api.WailaConstants;
@@ -28,15 +25,11 @@ import mcp.mobius.waila.mixin.BossHealthOverlayAccess;
 import mcp.mobius.waila.registry.Registrar;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.ChatScreen;
-import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.util.Mth;
 import net.minecraft.util.profiling.ProfilerFiller;
-import org.joml.Matrix4f;
 
 import static mcp.mobius.waila.util.DisplayUtil.enable2DRender;
-import static mcp.mobius.waila.util.DisplayUtil.fillGradient;
 import static mcp.mobius.waila.util.DisplayUtil.renderComponent;
-import static mcp.mobius.waila.util.DisplayUtil.renderRectBorder;
 
 public class TooltipRenderer {
 
@@ -51,6 +44,7 @@ public class TooltipRenderer {
     private static ITooltipComponent icon = EmptyComponent.INSTANCE;
     private static int topOffset;
     private static int maxLineWidth;
+    private static Padding padding;
 
     public static int colonOffset;
     public static int colonWidth;
@@ -95,7 +89,7 @@ public class TooltipRenderer {
         TooltipRenderer.icon = PluginConfig.CLIENT.getBoolean(WailaConstants.CONFIG_SHOW_ICON) ? icon : EmptyComponent.INSTANCE;
     }
 
-    public static void endBuild() {
+    public static Rectangle endBuild() {
         Preconditions.checkState(started);
 
         if (state.fireEvent()) {
@@ -140,8 +134,17 @@ public class TooltipRenderer {
             w += icon.getWidth() + 3;
         }
 
-        w += 8;
-        h = Math.max(h, icon.getHeight()) + 8;
+        int[] p = state.getTheme().getPadding();
+        padding = switch (p.length) {
+            case 1 -> new Padding(p[0], p[0], p[0], p[0]);
+            case 2 -> new Padding(p[0], p[1], p[0], p[1]);
+            case 3 -> new Padding(p[0], p[1], p[1], p[2]);
+            case 4 -> new Padding(p[0], p[1], p[2], p[3]);
+            default -> throw new IllegalArgumentException("Invalid padding array size, should be 1-4");
+        };
+
+        w += padding.left + padding.right;
+        h = Math.max(h, icon.getHeight()) + padding.top + padding.bottom;
 
         int windowW = (int) (window.getGuiScaledWidth() / scale);
         int windowH = (int) (window.getGuiScaledHeight() / scale);
@@ -161,6 +164,8 @@ public class TooltipRenderer {
 
         RECT.get().setRect(Mth.floor(x + 0.5), Mth.floor(y + 0.5), w, h);
         started = false;
+
+        return RECT.get();
     }
 
     public static void resetState() {
@@ -211,33 +216,14 @@ public class TooltipRenderer {
         int width = rect.width;
         int height = rect.height;
 
-        RenderSystem.disableTexture();
-        RenderSystem.enableBlend();
-        RenderSystem.defaultBlendFunc();
-        RenderSystem.setShader(GameRenderer::getPositionColorShader);
+        state.getTheme().renderTooltipBackground(matrices, x, y, width, height, state.getAlpha());
 
-        Tesselator tesselator = Tesselator.getInstance();
-        BufferBuilder buf = tesselator.getBuilder();
-        buf.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR);
-        Matrix4f matrix = matrices.last().pose();
+        int textX = x + padding.left;
+        int textY = y + padding.top + topOffset;
 
-        int background = state.getBg();
-        int gradStart = state.getGradStart();
-        int gradEnd = state.getGradEnd();
-
-        // @formatter:off
-        fillGradient(matrix, buf, x + 1        , y    , width - 2, height    , background, background);
-        fillGradient(matrix, buf, x            , y + 1, 1        , height - 2, background, background);
-        fillGradient(matrix, buf, x + width - 1, y + 1, 1        , height - 2, background, background);
-
-        renderRectBorder(matrix, buf, x + 1, y + 1, width - 2, height - 2 , gradStart, gradEnd);
-        // @formatter:on
-
-        tesselator.end();
-        RenderSystem.enableTexture();
-
-        int textX = x + (icon.getWidth() > 0 ? icon.getWidth() + 7 : 4);
-        int textY = y + 4 + topOffset;
+        if (icon.getWidth() > 0) {
+            textX += icon.getWidth() + 3;
+        }
 
         for (Line line : TOOLTIP) {
             line.render(matrices, textX, textY, maxLineWidth, delta);
@@ -254,11 +240,11 @@ public class TooltipRenderer {
         }
 
         Align.Y iconPos = PluginConfig.CLIENT.getEnum(WailaConstants.CONFIG_ICON_POSITION);
-        int iconY = y + 4 + Mth.ceil((height - 8 - icon.getHeight()) * iconPos.multiplier);
+        int iconY = y + padding.top + Mth.ceil((height - (padding.top + padding.bottom) - icon.getHeight()) * iconPos.multiplier);
         if (iconPos == Align.Y.BOTTOM) {
             iconY++;
         }
-        renderComponent(matrices, icon, x + 4, iconY, delta);
+        renderComponent(matrices, icon, x + padding.left, iconY, delta);
 
         RenderSystem.enableDepthTest();
         RenderSystem.getModelViewStack().popPose();
@@ -287,6 +273,10 @@ public class TooltipRenderer {
         }
     }
 
+    private record Padding(int top, int right, int bottom, int left) {
+
+    }
+
     public interface State {
 
         boolean render();
@@ -309,15 +299,11 @@ public class TooltipRenderer {
 
         boolean bossBarsOverlap();
 
-        int getBg();
+        float getAlpha();
 
-        int getGradStart();
-
-        int getGradEnd();
+        ITheme getTheme();
 
         boolean enableTextToSpeech();
-
-        int getFontColor();
 
     }
 

@@ -353,6 +353,10 @@ public interface IRegistrar {
     @ApiSide.ServerOnly
     <T, E extends Entity> void addEntityData(IServerDataProvider<E> provider, Class<T> clazz);
 
+    @ApiSide.ClientOnly
+    @ApiStatus.Experimental
+    <T extends ITheme> void addThemeType(ResourceLocation id, IThemeType<T> type);
+
     /**
      * Replaces the picker that Waila will use to get the object to show the tooltip to.
      *

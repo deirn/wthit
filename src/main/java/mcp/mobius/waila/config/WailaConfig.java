@@ -11,7 +11,10 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
+import mcp.mobius.waila.Waila;
+import mcp.mobius.waila.api.ITheme;
 import mcp.mobius.waila.api.IWailaConfig;
+import mcp.mobius.waila.gui.hud.theme.ThemeDefinition;
 import mcp.mobius.waila.util.DisplayUtil;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -241,20 +244,31 @@ public class WailaConfig implements IWailaConfig {
 
         }
 
+        @SuppressWarnings("removal")
         public static class Color implements IWailaConfig.Overlay.Color {
 
-            private int alpha = 80;
-            private Map<ResourceLocation, Theme> themes = new HashMap<>();
-            private ResourceLocation activeTheme = Theme.VANILLA.getId();
+            private static final ResourceLocation DEFAULT = Waila.id("vanilla");
 
-            public Color() {
-                themes.put(Theme.VANILLA.getId(), Theme.VANILLA);
-                themes.put(Theme.DARK.getId(), Theme.DARK);
-            }
+            private int alpha = 80;
+            private ResourceLocation activeTheme = DEFAULT;
+
+            private final Map<ResourceLocation, ThemeDefinition<?>> themes = new HashMap<>();
 
             @Override
             public int getAlpha() {
                 return DisplayUtil.getAlphaFromPercentage(alpha);
+            }
+
+            @Override
+            public ITheme getTheme() {
+                Map<ResourceLocation, ThemeDefinition<?>> allTheme = ThemeDefinition.getAll();
+
+                if (!allTheme.containsKey(activeTheme)) {
+                    activeTheme = DEFAULT;
+                    Waila.CONFIG.save();
+                }
+
+                return allTheme.get(activeTheme).getInitializedInstance();
             }
 
             public void setAlpha(int alpha) {
@@ -265,36 +279,37 @@ public class WailaConfig implements IWailaConfig {
                 return alpha;
             }
 
-            public Theme theme() {
-                return themes.getOrDefault(activeTheme, Theme.VANILLA);
+            public Map<ResourceLocation, ThemeDefinition<?>> getCustomThemes() {
+                return themes;
             }
 
-            public Map<ResourceLocation, Theme> themes() {
-                return themes;
+            public ResourceLocation getActiveTheme() {
+                return activeTheme;
             }
 
             @Override
             public int getBackgroundColor() {
-                return getAlpha() + theme().getBackgroundColor();
+                return 0;
             }
 
             @Override
             public int getGradientStart() {
-                return getAlpha() + theme().getGradientStart();
+                return 0;
             }
 
             @Override
             public int getGradientEnd() {
-                return getAlpha() + theme().getGradientEnd();
+                return 0;
             }
 
             @Override
             public int getFontColor() {
-                return theme().getFontColor();
+                return getTheme().getFontColor();
             }
 
             public void applyTheme(ResourceLocation id) {
-                activeTheme = themes.containsKey(id) ? id : activeTheme;
+                Map<ResourceLocation, ThemeDefinition<?>> allTheme = ThemeDefinition.getAll();
+                activeTheme = allTheme.containsKey(id) ? id : activeTheme;
             }
 
             public static class Adapter implements JsonSerializer<Color>, JsonDeserializer<Color> {
@@ -305,10 +320,9 @@ public class WailaConfig implements IWailaConfig {
                     Color color = new Color();
                     color.alpha = json.getAsJsonPrimitive("alpha").getAsInt();
                     color.activeTheme = new ResourceLocation(json.getAsJsonPrimitive("activeTheme").getAsString());
-                    color.themes = new HashMap<>();
                     json.getAsJsonArray("themes").forEach(e -> {
-                        Theme theme = context.deserialize(e, Theme.class);
-                        color.themes.put(theme.getId(), theme);
+                        ThemeDefinition<?> themeDef = context.deserialize(e, ThemeDefinition.class);
+                        color.themes.put(themeDef.id, themeDef);
                     });
                     return color;
                 }
