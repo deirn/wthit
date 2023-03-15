@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>IApiService</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>wthit</span>
+            </a>
+    </div>
+    <div>
+7.x    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="wthit::mcp.mobius.waila.api.__internal__/IApiService///PointingToDeclaration//1811849846">
+  <div class="breadcrumbs"><a href="../../../index.html">wthit</a><span class="delimiter">/</span><a href="../index.html">mcp.mobius.waila.api.__internal__</a><span class="delimiter">/</span><span class="current">IApiService</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>IApi</span><wbr></wbr><span><span>Service</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.Internal///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.Internal</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">interface </span><a href="index.html">IApiService</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/badasintended/wthit/tree/dev/master/src/api/java/mcp/mobius/waila/api/__internal__/IApiService.java#L18">source</a>)</span></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-1809630758%2FFunctions%2F1811849846" anchor-label="createConfigBuilder" id="-1809630758%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="create-config-builder.html"><span>create</span><wbr></wbr><span>Config</span><wbr></wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1809630758%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="../../mcp.mobius.waila.api/-i-json-config/-builder0/index.html">IJsonConfig.Builder0</a><span class="token operator">&lt;</span><a href="create-config-builder.html">T</a><span class="token operator">&gt;</span> <a href="create-config-builder.html"><span class="token function">createConfigBuilder</span></a><span class="token operator">&lt;</span>T<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><a href="create-config-builder.html">T</a><span class="token operator">&gt;</span> clazz</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-339727851%2FFunctions%2F1811849846" anchor-label="getAllPluginInfo" id="-339727851%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-all-plugin-info.html"><span>get</span><wbr></wbr><span>All</span><wbr></wbr><span>Plugin</span><wbr></wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-339727851%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html">Collection</a><span class="token operator">&lt;</span><a href="../../mcp.mobius.waila.api/-i-plugin-info/index.html">IPluginInfo</a><span class="token operator">&gt;</span> <a href="get-all-plugin-info.html"><span class="token function">getAllPluginInfo</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="612959880%2FFunctions%2F1811849846" anchor-label="getAllPluginInfoFromMod" id="612959880%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-all-plugin-info-from-mod.html"><span>get</span><wbr></wbr><span>All</span><wbr></wbr><span>Plugin</span><wbr></wbr><span>Info</span><wbr></wbr><span>From</span><wbr></wbr><span><span>Mod</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="612959880%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html">Collection</a><span class="token operator">&lt;</span><a href="../../mcp.mobius.waila.api/-i-plugin-info/index.html">IPluginInfo</a><span class="token operator">&gt;</span> <a href="get-all-plugin-info-from-mod.html"><span class="token function">getAllPluginInfoFromMod</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> modId</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-860065160%2FFunctions%2F1811849846" anchor-label="getBlacklistConfig" id="-860065160%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-blacklist-config.html"><span>get</span><wbr></wbr><span>Blacklist</span><wbr></wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-860065160%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="../../mcp.mobius.waila.api/-i-blacklist-config/index.html">IBlacklistConfig</a> <a href="get-blacklist-config.html"><span class="token function">getBlacklistConfig</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1061108533%2FFunctions%2F1811849846" anchor-label="getColonFontWidth" id="-1061108533%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-colon-font-width.html"><span>get</span><wbr></wbr><span>Colon</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1061108533%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span>int <a href="get-colon-font-width.html"><span class="token function">getColonFontWidth</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1145135329%2FFunctions%2F1811849846" anchor-label="getConfig" id="1145135329%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-config.html"><span>get</span><wbr></wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1145135329%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="../../mcp.mobius.waila.api/-i-waila-config/index.html">IWailaConfig</a> <a href="get-config.html"><span class="token function">getConfig</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1562545661%2FFunctions%2F1811849846" anchor-label="getFontColor" id="-1562545661%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-font-color.html"><span>get</span><wbr></wbr><span>Font</span><wbr></wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1562545661%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span>int <a href="get-font-color.html"><span class="token function">getFontColor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1390889193%2FFunctions%2F1811849846" anchor-label="getModInfo" id="1390889193%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-mod-info.html"><span>get</span><wbr></wbr><span>Mod</span><wbr></wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1390889193%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="../../mcp.mobius.waila.api/-i-mod-info/index.html">IModInfo</a> <a href="get-mod-info.html"><span class="token function">getModInfo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> namespace</span></span><span class="token punctuation">)</span></div><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="../../mcp.mobius.waila.api/-i-mod-info/index.html">IModInfo</a> <a href="get-mod-info.html"><span class="token function">getModInfo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span> stack</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-399586892%2FFunctions%2F1811849846" anchor-label="getPairComponentColonOffset" id="-399586892%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-pair-component-colon-offset.html"><span>get</span><wbr></wbr><span>Pair</span><wbr></wbr><span>Component</span><wbr></wbr><span>Colon</span><wbr></wbr><span><span>Offset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-399586892%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span>int <a href="get-pair-component-colon-offset.html"><span class="token function">getPairComponentColonOffset</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-331537266%2FFunctions%2F1811849846" anchor-label="getPickerAccessor" id="-331537266%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-picker-accessor.html"><span>get</span><wbr></wbr><span>Picker</span><wbr></wbr><span><span>Accessor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-331537266%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html"><span class="token annotation builtin">Deprecated</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="../../mcp.mobius.waila.api/-i-picker-accessor/index.html">IPickerAccessor</a> <a href="get-picker-accessor.html"><span class="token function"><strike>getPickerAccessor</strike></span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-409865137%2FFunctions%2F1811849846" anchor-label="getPickerResults" id="-409865137%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-picker-results.html"><span>get</span><wbr></wbr><span>Picker</span><wbr></wbr><span><span>Results</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-409865137%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html"><span class="token annotation builtin">Deprecated</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="../../mcp.mobius.waila.api/-i-picker-results/index.html">IPickerResults</a> <a href="get-picker-results.html"><span class="token function"><strike>getPickerResults</strike></span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-992307324%2FFunctions%2F1811849846" anchor-label="getPluginInfo" id="-992307324%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-plugin-info.html"><span>get</span><wbr></wbr><span>Plugin</span><wbr></wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-992307324%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span><a href="../../mcp.mobius.waila.api/-i-plugin-info/index.html">IPluginInfo</a> <a href="get-plugin-info.html"><span class="token function">getPluginInfo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="net.minecraft.resources/ResourceLocation///PointingToDeclaration/">ResourceLocation</span> pluginId</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1984170227%2FFunctions%2F1811849846" anchor-label="renderComponent" id="1984170227%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="render-component.html"><span>render</span><wbr></wbr><span><span>Component</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1984170227%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span>void <a href="render-component.html"><span class="token function">renderComponent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.mojang.blaze3d.vertex/PoseStack///PointingToDeclaration/">PoseStack</span> matrices<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../../mcp.mobius.waila.api/-i-tooltip-component/index.html">ITooltipComponent</a> component<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int x<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int y<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>float delta</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-596105764%2FFunctions%2F1811849846" anchor-label="renderItem" id="-596105764%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="render-item.html"><span>render</span><wbr></wbr><span><span>Item</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-596105764%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span>void <a href="render-item.html"><span class="token function">renderItem</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.mojang.blaze3d.vertex/PoseStack///PointingToDeclaration/">PoseStack</span> matrices<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int x<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int y<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span> stack</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

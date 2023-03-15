@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>IBlockComponentProvider</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>wthit</span>
+            </a>
+    </div>
+    <div>
+7.x    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="wthit::mcp.mobius.waila.api/IBlockComponentProvider///PointingToDeclaration//1811849846">
+  <div class="breadcrumbs"><a href="../../../index.html">wthit</a><span class="delimiter">/</span><a href="../index.html">mcp.mobius.waila.api</a><span class="delimiter">/</span><span class="current">IBlockComponentProvider</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>IBlock</span><wbr></wbr><span>Component</span><wbr></wbr><span><span>Provider</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../mcp.mobius.waila.api.__internal__/-api-side/-client-only/index.html"><span class="token annotation builtin">ApiSide.ClientOnly</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.OverrideOnly///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.OverrideOnly</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">interface </span><a href="index.html">IBlockComponentProvider</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/badasintended/wthit/tree/dev/master/src/api/java/mcp/mobius/waila/api/IBlockComponentProvider.java#L12">source</a>)</span></span></div><p class="paragraph">Used to provide <span data-unresolved-link="net.minecraft.world.level.block/Block///PointingToDeclaration/">Block</span>/<span data-unresolved-link="net.minecraft.world.level.block.entity/BlockEntity///PointingToDeclaration/">BlockEntity</span> tooltip information to Waila. </p><p class="paragraph"> All methods in this interface <strong>shouldn't</strong> to be called by the implementing mod. An instance of the class is to be registered via the <a href="../-i-registrar/index.html">IRegistrar</a> instance provided in <a href="../-i-waila-plugin/index.html">IWailaPlugin</a>.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="See also">See also</button></div>
+    <div class="tabs-section-body">
+      <h4 class="">See also</h4>
+      <div data-togglable="See also">
+        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-i-waila-plugin/index.html"><span>IWaila</span><wbr></wbr><span><span>Plugin</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-i-registrar/index.html"><span><span>IRegistrar</span></span></a></div></span></div><div></div></div></div></div></div></div></div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="120267038%2FFunctions%2F1811849846" anchor-label="appendBody" id="120267038%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="append-body.html"><span>append</span><wbr></wbr><span><span>Body</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="120267038%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="append-body.html"><span class="token function">appendBody</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../-i-tooltip/index.html">ITooltip</a> tooltip<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-i-block-accessor/index.html">IBlockAccessor</a> accessor<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-i-plugin-config/index.html">IPluginConfig</a> config</span></span><span class="token punctuation">)</span></div><div class="brief ">Callback used to add lines to one of the three sections of the tooltip (Head, Body, Tail).</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1079310944%2FFunctions%2F1811849846" anchor-label="appendHead" id="-1079310944%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="append-head.html"><span>append</span><wbr></wbr><span><span>Head</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1079310944%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="append-head.html"><span class="token function">appendHead</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../-i-tooltip/index.html">ITooltip</a> tooltip<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-i-block-accessor/index.html">IBlockAccessor</a> accessor<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-i-plugin-config/index.html">IPluginConfig</a> config</span></span><span class="token punctuation">)</span></div><div class="brief ">Callback used to add lines to one of the three sections of the tooltip (Head, Body, Tail).</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-464800464%2FFunctions%2F1811849846" anchor-label="appendTail" id="-464800464%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="append-tail.html"><span>append</span><wbr></wbr><span><span>Tail</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-464800464%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="append-tail.html"><span class="token function">appendTail</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../-i-tooltip/index.html">ITooltip</a> tooltip<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-i-block-accessor/index.html">IBlockAccessor</a> accessor<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-i-plugin-config/index.html">IPluginConfig</a> config</span></span><span class="token punctuation">)</span></div><div class="brief ">Callback used to add lines to one of the three sections of the tooltip (Head, Body, Tail).</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1532561023%2FFunctions%2F1811849846" anchor-label="getIcon" id="-1532561023%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-icon.html"><span>get</span><wbr></wbr><span><span>Icon</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1532561023%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/Nullable///PointingToDeclaration/"><span class="token annotation builtin">Nullable</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><span><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/Nullable///PointingToDeclaration/"><span class="token annotation builtin">Nullable</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> </span><a href="../-i-tooltip-component/index.html">ITooltipComponent</a> <a href="get-icon.html"><span class="token function">getIcon</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../-i-block-accessor/index.html">IBlockAccessor</a> accessor<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-i-plugin-config/index.html">IPluginConfig</a> config</span></span><span class="token punctuation">)</span></div><div class="brief ">Callback used to set an icon to display in the tooltip.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="214935374%2FFunctions%2F1811849846" anchor-label="getOverride" id="214935374%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-override.html"><span>get</span><wbr></wbr><span><span>Override</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="214935374%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/Nullable///PointingToDeclaration/"><span class="token annotation builtin">Nullable</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><span><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/Nullable///PointingToDeclaration/"><span class="token annotation builtin">Nullable</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> </span><span data-unresolved-link="net.minecraft.world.level.block.state/BlockState///PointingToDeclaration/">BlockState</span> <a href="get-override.html"><span class="token function">getOverride</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../-i-block-accessor/index.html">IBlockAccessor</a> accessor<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-i-plugin-config/index.html">IPluginConfig</a> config</span></span><span class="token punctuation">)</span></div><div class="brief ">Callback used to override the default Waila lookup system.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

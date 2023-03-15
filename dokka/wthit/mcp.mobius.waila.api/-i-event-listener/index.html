@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>IEventListener</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>wthit</span>
+            </a>
+    </div>
+    <div>
+7.x    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="wthit::mcp.mobius.waila.api/IEventListener///PointingToDeclaration//1811849846">
+  <div class="breadcrumbs"><a href="../../../index.html">wthit</a><span class="delimiter">/</span><a href="../index.html">mcp.mobius.waila.api</a><span class="delimiter">/</span><span class="current">IEventListener</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>IEvent</span><wbr></wbr><span><span>Listener</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.OverrideOnly///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.OverrideOnly</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">interface </span><a href="index.html">IEventListener</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/badasintended/wthit/tree/dev/master/src/api/java/mcp/mobius/waila/api/IEventListener.java#L10">source</a>)</span></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-251147431%2FClasslikes%2F1811849846" anchor-label="Canceller" id="-251147431%2FClasslikes%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-canceller/index.html"><span><span>Canceller</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-251147431%2FClasslikes%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace"><span class="token keyword">public </span><span class="token keyword">interface </span><a href="-canceller/index.html">Canceller</a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-681752998%2FFunctions%2F1811849846" anchor-label="getHoveredItemModName" id="-681752998%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-hovered-item-mod-name.html"><span>get</span><wbr></wbr><span>Hovered</span><wbr></wbr><span>Item</span><wbr></wbr><span>Mod</span><wbr></wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-681752998%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/Nullable///PointingToDeclaration/"><span class="token annotation builtin">Nullable</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword"></span><span><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/Nullable///PointingToDeclaration/"><span class="token annotation builtin">Nullable</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> <a href="get-hovered-item-mod-name.html"><span class="token function">getHoveredItemModName</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span> stack<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-i-plugin-config/index.html">IPluginConfig</a> config</span></span><span class="token punctuation">)</span></div><div class="brief ">This event is fired when item tooltip is displayed on container screen and waila showing the item's mod name.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-616201033%2FFunctions%2F1811849846" anchor-label="onAfterTooltipRender" id="-616201033%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="on-after-tooltip-render.html"><span>on</span><wbr></wbr><span>After</span><wbr></wbr><span>Tooltip</span><wbr></wbr><span><span>Render</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-616201033%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="on-after-tooltip-render.html"><span class="token function">onAfterTooltipRender</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.mojang.blaze3d.vertex/PoseStack///PointingToDeclaration/">PoseStack</span> matrices<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Rectangle.html">Rectangle</a> rect<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-i-common-accessor/index.html">ICommonAccessor</a> accessor<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-i-plugin-config/index.html">IPluginConfig</a> config</span></span><span class="token punctuation">)</span></div><div class="brief ">This event is fired just after the tooltip is rendered.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1893638540%2FFunctions%2F1811849846" anchor-label="onBeforeTooltipRender" id="-1893638540%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="on-before-tooltip-render.html"><span>on</span><wbr></wbr><span>Before</span><wbr></wbr><span>Tooltip</span><wbr></wbr><span><span>Render</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1893638540%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="on-before-tooltip-render.html"><span class="token function">onBeforeTooltipRender</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.mojang.blaze3d.vertex/PoseStack///PointingToDeclaration/">PoseStack</span> matrices<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Rectangle.html">Rectangle</a> rect<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-i-common-accessor/index.html">ICommonAccessor</a> accessor<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-i-plugin-config/index.html">IPluginConfig</a> config<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="-canceller/index.html">IEventListener.Canceller</a> canceller</span></span><span class="token punctuation">)</span></div><div class="brief ">This event is fired just before the tooltip is rendered.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="275718715%2FFunctions%2F1811849846" anchor-label="onHandleTooltip" id="275718715%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="on-handle-tooltip.html"><span>on</span><wbr></wbr><span>Handle</span><wbr></wbr><span><span>Tooltip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="275718715%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword"></span>void <a href="on-handle-tooltip.html"><span class="token function">onHandleTooltip</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><a href="../-i-tooltip/index.html">ITooltip</a> tooltip<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-i-common-accessor/index.html">ICommonAccessor</a> accessor<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span><a href="../-i-plugin-config/index.html">IPluginConfig</a> config</span></span><span class="token punctuation">)</span></div><div class="brief ">This event is fired just before the tooltip size is calculated.</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>

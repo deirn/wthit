@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ITooltipComponent</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+            <a href="../../../index.html">
+                    <span>wthit</span>
+            </a>
+    </div>
+    <div>
+7.x    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageIds="wthit::mcp.mobius.waila.api/ITooltipComponent///PointingToDeclaration//1811849846">
+  <div class="breadcrumbs"><a href="../../../index.html">wthit</a><span class="delimiter">/</span><a href="../index.html">mcp.mobius.waila.api</a><span class="delimiter">/</span><span class="current">ITooltipComponent</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>ITooltip</span><wbr></wbr><span><span>Component</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../mcp.mobius.waila.api.__internal__/-api-side/-client-only/index.html"><span class="token annotation builtin">ApiSide.ClientOnly</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/ApiStatus.OverrideOnly///PointingToDeclaration/"><span class="token annotation builtin">ApiStatus.OverrideOnly</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><span class="token keyword">public </span><span class="token keyword">interface </span><a href="index.html">ITooltipComponent</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/badasintended/wthit/tree/dev/master/src/api/java/mcp/mobius/waila/api/ITooltipComponent.java#L7">source</a>)</span></span></div><p class="paragraph">See <span data-unresolved-link="////PointingToDeclaration/">mcp.mobius.waila.api.component</span> for default implementations.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-1303140914%2FFunctions%2F1811849846" anchor-label="getHeight" id="-1303140914%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-height.html"><span>get</span><wbr></wbr><span><span>Height</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1303140914%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span>int <a href="get-height.html"><span class="token function">getHeight</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1942090657%2FFunctions%2F1811849846" anchor-label="getWidth" id="-1942090657%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="get-width.html"><span>get</span><wbr></wbr><span><span>Width</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1942090657%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span>int <a href="get-width.html"><span class="token function">getWidth</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2032283617%2FFunctions%2F1811849846" anchor-label="render" id="2032283617%2FFunctions%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="render.html"><span><span>render</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2032283617%2FFunctions%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":apiDokka/api"><div class="symbol monospace block"><span class="token keyword">public </span><span class="token keyword">abstract </span><span class="token keyword"></span>void <a href="render.html"><span class="token function">render</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword"></span><span data-unresolved-link="com.mojang.blaze3d.vertex/PoseStack///PointingToDeclaration/">PoseStack</span> matrices<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int x<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>int y<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword"></span>float delta</span></span><span class="token punctuation">)</span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Inheritors</h2>
+      <div class="table" data-togglable="Inheritors"><a data-name="-1547627167%2FInheritors%2F1811849846" anchor-label="PairComponent" id="-1547627167%2FInheritors%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../mcp.mobius.waila.api.component/-pair-component/index.html">PairComponent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1547627167%2FInheritors%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-1004112570%2FInheritors%2F1811849846" anchor-label="WrappedComponent" id="-1004112570%2FInheritors%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../mcp.mobius.waila.api.component/-wrapped-component/index.html">WrappedComponent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1004112570%2FInheritors%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="1654654256%2FInheritors%2F1811849846" anchor-label="GrowingComponent" id="1654654256%2FInheritors%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../mcp.mobius.waila.api.component/-growing-component/index.html">GrowingComponent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1654654256%2FInheritors%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-159965092%2FInheritors%2F1811849846" anchor-label="TextureComponent" id="-159965092%2FInheritors%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../mcp.mobius.waila.api.component/-texture-component/index.html">TextureComponent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-159965092%2FInheritors%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-1285266044%2FInheritors%2F1811849846" anchor-label="SpacingComponent" id="-1285266044%2FInheritors%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../mcp.mobius.waila.api.component/-spacing-component/index.html">SpacingComponent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1285266044%2FInheritors%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-1665474726%2FInheritors%2F1811849846" anchor-label="ItemComponent" id="-1665474726%2FInheritors%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../mcp.mobius.waila.api.component/-item-component/index.html">ItemComponent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1665474726%2FInheritors%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-637772893%2FInheritors%2F1811849846" anchor-label="HealthComponent" id="-637772893%2FInheritors%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../mcp.mobius.waila.api.component/-health-component/index.html">HealthComponent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-637772893%2FInheritors%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="1253050340%2FInheritors%2F1811849846" anchor-label="ColorComponent" id="1253050340%2FInheritors%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../mcp.mobius.waila.api.component/-color-component/index.html">ColorComponent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1253050340%2FInheritors%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="2111136590%2FInheritors%2F1811849846" anchor-label="EmptyComponent" id="2111136590%2FInheritors%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../mcp.mobius.waila.api.component/-empty-component/index.html">EmptyComponent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2111136590%2FInheritors%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-10849507%2FInheritors%2F1811849846" anchor-label="ProgressArrowComponent" id="-10849507%2FInheritors%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../mcp.mobius.waila.api.component/-progress-arrow-component/index.html">ProgressArrowComponent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-10849507%2FInheritors%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="543823828%2FInheritors%2F1811849846" anchor-label="BarComponent" id="543823828%2FInheritors%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../mcp.mobius.waila.api.component/-bar-component/index.html">BarComponent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="543823828%2FInheritors%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-263339328%2FInheritors%2F1811849846" anchor-label="ArmorComponent" id="-263339328%2FInheritors%2F1811849846" data-filterable-set=":apiDokka/api"></a>
+        <div class="table-row" data-filterable-current=":apiDokka/api" data-filterable-set=":apiDokka/api">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../mcp.mobius.waila.api.component/-armor-component/index.html">ArmorComponent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-263339328%2FInheritors%2F1811849846"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
