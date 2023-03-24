@@ -12,6 +12,9 @@
 
 6.x - 1.19.3 - dev/1.19.3 - java 17
 ===================================
+6.99.0   - Non-master branch test
+           - nested
+             - nested
 6.2.1    - Updated Russian Translation (#193)
          - Fixed config text field cursor not blinking (#195)
          - Fixed plugin config button not accessible via keyboard navigation (#196)
