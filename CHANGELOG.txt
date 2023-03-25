@@ -120,6 +120,9 @@
 
 4.x - 1.18.2 - eol/1.18 - java 17
 =================================
+4.99.0   - 1.18.2 test
+           - aaa
+             - aaa
 4.13.6   - Fixed crash with mods expecting entity data to be serialized only on server side
 4.13.5   - Fix `ArrayIndexOutOfBoundsException` (#173)
 4.13.4   - Changed override config options to be toggleable on client-only installation
