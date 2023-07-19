@@ -21,6 +21,10 @@
   "tooltip.waila.horse.jump.key"                                : "跳跃",
   "tooltip.waila.horse.jump.value"                              : "%s格高",
   "tooltip.waila.horse.speed.key"                               : "速度",
+
+
+
+  
   "tooltip.waila.horse.speed.value"                             : "%s米/秒",
 
   "tooltip.waila.instrument.harp"                               : "竖琴",
