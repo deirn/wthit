@@ -1,3 +1,4 @@
+import de.undercouch.gradle.tasks.download.Download
 import groovy.json.JsonGenerator
 import groovy.json.JsonSlurper
 import org.jetbrains.dokka.gradle.DokkaTask
@@ -9,6 +10,7 @@ plugins {
     id("org.spongepowered.gradle.vanilla") version "0.2.1-SNAPSHOT"
     id("maven-publish")
     id("org.jetbrains.dokka") version "1.7.20"
+    id("de.undercouch.download") version "5.5.0"
 }
 
 version = env["MOD_VERSION"] ?: "${prop["majorVersion"]}.999-${env["GIT_HASH"] ?: "local"}"
@@ -200,5 +202,39 @@ task<DokkaTask>("apiDokka") {
                 remoteUrl.set(URL("https://github.com/badasintended/wthit/tree/dev/master/src"))
             }
         }
+    }
+}
+
+tasks {
+    val (velocityVersion, velocityBuild) = prop["velocity"].split("-", limit = 2)
+    val velocityJar = "velocity-${velocityVersion}-SNAPSHOT-${velocityBuild}.jar"
+    val velocityJarPath = "run/.velocity/.bin/${velocityJar}"
+
+    val downloadVelocity by creating(Download::class) {
+        group = "velocity"
+
+        src("https://api.papermc.io/v2/projects/velocity/versions/${velocityVersion}-SNAPSHOT/builds/${velocityBuild}/downloads/${velocityJar}")
+        dest(file(velocityJarPath))
+        onlyIfModified(true)
+    }
+
+    val runVelocity by creating(JavaExec::class) {
+        group = "velocity"
+        dependsOn(downloadVelocity)
+
+        isIgnoreExitValue = true
+        workingDir = file("run/.velocity")
+        classpath = files(velocityJarPath)
+        mainClass.set("com.velocitypowered.proxy.Velocity")
+        jvmArgs(
+            "-Xms512M",
+            "-Xmx512M",
+            "-XX:+UseG1GC",
+            "-XX:G1HeapRegionSize=4M",
+            "-XX:+UnlockExperimentalVMOptions",
+            "-XX:+ParallelRefProcEnabled",
+            "-XX:+AlwaysPreTouch",
+            "-Dvelocity.packet-decode-logging=true"
+        )
     }
 }

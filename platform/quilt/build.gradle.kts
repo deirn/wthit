@@ -64,6 +64,10 @@ loom {
             vmArgs += "-Dwaila.enableTestPlugin=true"
             vmArgs += "-Dwaila.debugCommands=true"
         }
+
+        getByName("client") {
+            runDir = "run/.client"
+        }
     }
 }
 
